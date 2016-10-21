@@ -1,0 +1,12 @@
+<div class="jumbotron">
+	<div class="container">
+  <h1>Hello, User</h1>
+  <p> This portal is an srtcile portal where you can see all the articles posted by users with the proper tags and you can like and comment. You can create new articles.</p>
+  
+  	<% if user_signed_in? %>
+  	  <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg" %>
+  	<% else %>
+      <%= link_to "Login", new_user_session_path, class: 'btn btn-primary btn-lg'%>
+    <%end%>
+ 	</div>
+</div>
