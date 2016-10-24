@@ -8,5 +8,6 @@
   	<% else %>
       <%= link_to "Login", new_user_session_path, class: 'btn btn-primary btn-lg'%>
     <%end%>
+    <%= link_to "Download", download_posts_path, class: 'btn btn-primary btn-lg', data: { turbolinks: false }%>
  	</div>
 </div>

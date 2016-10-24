@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:download]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /test1s
@@ -21,6 +21,10 @@ class PostsController < ApplicationController
 
   # GET /test1s/1/edit
   def edit
+  end
+
+  def download
+    send_file(File.join(Rails.root, "data", "sample.xlsx"), :type=>"application/xlsx", :x_sendfile=>true)
   end
 
   # POST /test1s
