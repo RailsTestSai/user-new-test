@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   end
 
   def download
-    send_file(File.join(Rails.root, "data", "sample.xlsx"), :type=>"application/xlsx", :x_sendfile=>true)
+    send_file(File.join(Rails.root, "data", "sample.xls"), :type=>"application/xls", :x_sendfile=>true)
   end
 
   # POST /test1s
